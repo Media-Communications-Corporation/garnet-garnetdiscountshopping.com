@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+    stages {
+        stage("Build") {
+            steps {
+                sh '''#!/bin/bash
+                    ##
+                    ## Nothing much to do here really.
+                    ## We will simply deploy the entire website for now since this is a dev build.
+                    ## Do not delete any folders, just the unnecessary files.
+                    ##
+                    rm -f README.md
+                    rm -f .gitignore
+                    rm -f Jenkinsfile-dev
+                    rm -f Jenkinsfile-live
+                    rm -rf .git/
+                    ls -alh
+                '''
+            }
+        }
+        stage("Deploy") {
+            steps {
+                sh '''#!/bin/bash
+                    ##
+                    ## Deploy whatever files and folders that remain in the workspace.
+                    ## Make sure to setup environment variables in Jenkins to match the names here.
+                    ##   $DEPLOY_USERHOST -- e.g. jonaxse@123.45.67.89
+                    ##   $DEPLOY_FOLDER   -- e.g. /home/user/siteusername/htdocs/mywebsite.com/
+                    ##
+                    ## All the files in the deploy folder will be wiped clean before the build artifacts here are copied over.
+                    ##
+                    echo "Cleaning up deployment folder..."
+                    ssh $DEPLOY_USERHOST "rm -rf $DEPLOY_FOLDER/*"
+
+                    echo "Copying over build artifacts to deployment folder..."
+                    scp -r * $DEPLOY_USERHOST:$DEPLOY_FOLDER/
+
+                    echo "All Done."
+                '''
+            }
+        }
+    }
+}
