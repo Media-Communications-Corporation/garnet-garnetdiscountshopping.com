@@ -7,6 +7,9 @@
 }
 
 
+.bg-light {
+    background-color: #ffffff!important;
+}
 
 li.nav-item a {
     color: #333;
@@ -125,6 +128,7 @@ li.nav-item a {
 .sec4 {
     background-color: #CCEDDC;
     padding: 60px 0px;
+    color: #333;
 }
 
 ul.footer-links {
@@ -149,6 +153,254 @@ ul.footer-links {
 }
 
 
+
+/* Subpages below header */
+.subpage-header .container {
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.subpage-header span {
+    color: #00A651;
+}
+
+.subpage-header h2 {
+    color: #00A651;
+}
+
+
+
+
+/*********** Checkout/Payment Page ***********/
+
+.checkout-wrap {
+    margin-bottom: 100px;
+}
+
+.checkout-wrap .container {
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.checkout-form {
+    text-align: left;
+}
+
+
+.checkout-pay {
+    background-color: #CCEDDC;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.coupon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupon-btn button{
+    border-radius: 5px;
+    border: 2px solid #00A651;
+    padding: 5px 45px;
+    background-color: #CCEDDC;
+    color: #00A651;
+}
+
+
+.pay-p {
+    color: #00A651;
+}
+
+.check-amount h3{
+    width: 30%;
+    margin: auto;
+    background-color: #fff;
+    color: #00A651;
+    padding: 10px 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.pay-btn button{
+    border-radius: 5px;
+    background: #00A651;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.card {
+    background-color: #f1f3f6;
+    border: none;
+}
+
+/*********** Subscription Page ***********/
+
+.subscription .container {
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.subscription img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.subscription-amount {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.subscription-amount h2 {
+    color: #00A651;
+}
+
+.amount-details {
+    font-size: 14px;
+    background-color: #CCEDDC;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 300;
+}
+
+.subscription-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn1 {
+    color: #00A651;
+    border-radius: 5px;
+    border: 2px solid #00A651;
+    background-color: transparent;
+    padding: 8px 30px;
+}
+
+.btn2 {
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #00A651;
+    padding: 10px 30px;
+    border: none;
+}
+
+
+
+/*********** Contact Us Page ***********/
+.contact-section .container{
+    background-color: #F1F3F6;
+    padding: 20px 30px 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.contact-col {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.contact-col h3 {
+    color: #00A651;
+    font-size: 24px;
+}
+
+
+
+/*********** Thank You Page ***********/
+.thankyou {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.thankyou .container {
+    background-color: #CCEDDC;
+    padding: 80px 0px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.ty-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-img {
+    padding-right: 30px;
+}
+
+.ty-msg {
+    text-align: left;
+}
+
+.ty-msg p {
+    margin: 0px;
+}
+
+.ty-details {
+    width: 35%;
+    margin: auto;
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.ty-col {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.support .container {
+    background-color: #F1F3F6;
+    padding: 60px 0px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    .ty-details {
+        width: 75%;
+        margin: auto;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .sec2-bg {
         height: 50vh;
@@ -166,6 +418,31 @@ ul.footer-links {
     }
     .banner h1 {
         font-size: 50px;
+    }
+
+    /* Subscription page */
+    .subscription-btn {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn2 {
+        margin-top: 5px;
+    }
+
+    /* Thank you page */
+    .ty-wrap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .check-img {
+        padding-right: 0px;
+    }
+
+    .ty-details {
+        width: 100%;
+        margin: auto;
     }
     
 }
