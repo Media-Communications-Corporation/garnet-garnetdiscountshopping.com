@@ -20,52 +20,57 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="header">
-        <nav class="navbar navbar-expand-md bg-light navbar-light">
-          <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/images/garnet-logo.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Service</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact Us</a>
-                </li>  
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                  </li> 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Manage Account</a>
-                  </li>   
-              </ul>
-            </div>  
-          </div>
-        </nav>
+    <div id="header">
     </div>
 
 
     <div class="subpage-header">
         <div class="container">
-            <p>Home / <span>Subscription Page</span></p>
+            <p><a href="index.html">Home</a> / <span>Subscription Page</span></p>
             <br>
             <h2>Subscription Page</h2>
         </div>
     </div>
 
-    <div class="subscription">
+    <div class="subscription pricing" id="pricing">
         <div class="container">
-            <div class="row">
+            <div class="row" id="productItems">
                 <div class="col-lg-7">
                     <img src="assets/images/shopping.png">
                 </div>
-                <div class="col-lg-5">
+
+                <div class="col-md-5 mb-4 productDisplay order2">
+                    <div class="section-title">
+                        <h2>
+                            Wanting to reduce your shopping expenses while maintaining both ease and excellence.
+                        </h2>
+                        <p>
+                            Enroll in a subscription program for shopping and savings today and begin to economize on your shopping expenses, all the while enjoying the convenience and quality that you rightfully deserve.
+                        </p>
+                    </div>
+                    <div class="box featured">
+
+                        <div class="d-inline-block">
+                            <h2 class="price float-start"></h2>
+                        </div>
+                        <div id="content">
+                            <p class="monthly-offerdetails open m-0 amount-details" style="font-weight: 500; color: #333;"><span class="cross-stand-alone"></span>Sign up and pay <span class="price"></span> today for 30 days of service and <span class="price"></span> monthly thereafter, cancel anytime by calling <span class="cs-phone">833-420-6247</span> or online at www.msshoppingdeals.com.</p>
+                        </div>
+
+                        <div class="subscription-btn">
+                            <div class="btn-wrap">
+                                <a class="btn1 btn-buy addToCart" href="#">Subscribe Now</a>
+                            </div>
+                            <div>
+                                 <a href="checkout.html" class="btn2">Proceed to Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                   
+                </div>
+
+                <!-- <div class="col-lg-5">
                     <h2 class="title">Looking to cut down on your 
                         shopping costs without 
                         compromising convenience and 
@@ -87,50 +92,92 @@
                         </div>
                     </div>
                 
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
 
-    <div class="sec4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Garnet Discount Shopping</h2>
-                    <br>
-                    <p><strong>Address:</strong>  Lorem Ipsum has been the industry's standard</p>
-                    <p><strong>Phone:</strong> 000-000-000</p>
-                    <p><strong>Email:</strong>  support@garnetdiscountshopping.com</p>
-                </div>
-                <div class="col-lg-6">
-                    <h2>Usefull Link</h2>
-                    <br>
-                    <ul class="footer-links">
-                        <li>Terms & Condition</li>
-                        <li>Privacy Policy</li>
-                        <li>Contact Us</li>
-                        <li>Manage my Account</li>
-                    </ul>
-                    <br>
-                    <div class="sm-icons">
-                        <img src="assets/images/twiiter.png">
-                        <img src="assets/images/fb.png">
-                        <img src="assets/images/ig.png">
-                        <img src="assets/images/skype.png">
-                        <img src="assets/images/linkedin.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="footer"></div>
 
-    <div class="footer">
-        <div class="container">
-            <p>© Copyright <strong>Garnet Discount Shopping</strong>. All Rights Reserved</p>
-        </div>
-    </div>
+    <script id="productList-display" type="text/x-handlebars-template"></script>
+    <input id="merchant-id" campaign_id="3" sub_keyword="smart retailing" type="hidden" />
+    <!-- kinahanglan sa konnek.js end -->
 
 
+
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery-latest.min.js"></script>
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.api.call.js"></script>
+    <!-- <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart.js"></script> -->
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart_v2.js"></script>
+    <script src="assets/js/setup.js"></script>
+    <script src="assets/js/konnek.js"></script>
+    <script src="assets/js/load.js"></script>
+    <!-- <script src="assets/js/getDomain.js"></script>
+    <script src="assets/js/cart.js"></script> -->
+
+
+
+    <!-- <script>
+                   
+        var konneckApiCall = KonnekApiInit();
+            konneckApiCall.setup(setup_); 
+        var konnekCart = KonnekCart(jQuery, konneckApiCall);
+            konnekCart.prodSetup(setup);// merge kn setup and setup variable
+            konnekCart.customCode=function(){
+                  $('.addToCart').on("click",function(){
+                       var parent = $(this).parents('.prod');
+                       var nameProduct= $(this).attr("prodname");
+                       setTimeout(function(){                  
+                            if($(parent).find(".added-cart").length!=0){
+                                 swal(nameProduct, "is added to cart !", "success");  
+                            } 
+                       },300);                       
+                  });
+                                                
+             
+            }
+
+        konnekCart.CountCart=function(count){
+             //gituyo ni kay ang shipping gihimo man nga product option so moadd sya as cart
+             //mao giadd ni para dle sya maapil sa count ang shipping sa cart
+             var arr = JSON.parse(konnekCart.cartStorage()); 
+             for (var i in arr) {
+                  if(arr[i].prodName.toLowerCase().indexOf("shipping")!=-1){ 
+                       count =count-1;
+                  }   
+             }
+             
+             $(".cartCount").text(count);
+
+        }
+
+        konnekCart.exec();
+</script> -->
+
+
+    <script>
+        $(document).ready(function () {
+
+            if (document.cookie.indexOf("cartItem_dw") < 0) {
+                $('.tocheckout').hide();
+                $('.cartIcon').hide();
+            }
+            else {
+                $('.tocheckout').show();
+                $('.cartIcon').show()
+            }
+            $(".addToCart").on("click", function () {
+                $('.tocheckout').show();
+                $('.cartIcon').show();
+            })
+        })
+    </script>
+
+    
 </body>
 </html>
