@@ -286,6 +286,7 @@ ul.footer-links {
 .subscription-btn {
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
 .btn1 {
