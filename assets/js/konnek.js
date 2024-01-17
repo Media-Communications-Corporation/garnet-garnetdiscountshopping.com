@@ -20,6 +20,7 @@
             konneckApiCall.setup(setup_); 
         var konnekCart = KonnekCart(jQuery, konneckApiCall);
             konnekCart.prodSetup(setup);// merge kn setup and setup variable
+            
         
         
         
@@ -374,7 +375,6 @@
                    }
               
             }
-
 
             //execute all override functions 
             //start here
