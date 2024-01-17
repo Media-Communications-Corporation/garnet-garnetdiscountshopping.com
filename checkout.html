@@ -190,14 +190,18 @@
                         <p class="pay-p">You have to pay</p>
                         <div class="check-amount">
                             <h3>
-                                $ 32.99
+                                $ 0.00
                             </h3>
                         </div>
                         <br>
                         <p>You're alsmost done! Subscribe now and begin to economize on your shopping expenses, all the while enjoying the convenience and quality that you rightfully deserve.</p>
                         <p class="update-p">100% Guaranteed support and update for the next 5 years.</p>
-    
-                        <div class="coupon">
+                        
+                        
+                        <div class="card card-blue p-3 text-white mb-3 cartItem">
+
+                        </div>
+                        <!-- <div class="coupon">
                             <div class="col-lg">
                                 <div class="form-floating mb-3 coupon-input">
                                     <input placeholder="Coupon Code" class="form-control" id="fields_coupon" name="fields_coupon">
@@ -212,23 +216,136 @@
     
                         <div class="total">
                             <h4>Total</h4>
-                            <h4>$32.99</h4>
+                            <h4>0.00</h4>
                         </div>
     
                         <div class="pay-btn">
                             <button>Pay $32.99</button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
     <div id="footer"></div>
 
+    
+
+    <script id="cartList-display" type="text/x-handlebars-template">
+        {{#each subscriptions}}
+        <span>You have to pay</span>
+        <div class="d-flex flex-row align-items-end mb-3 prodname=" {{prodName}} " price=" {{prodPrice}} " shippingprice=" {{shippingPrice}} " maxqty=" {{maxQty}} " minqty=" 0" data-keycode="{{keycode}}" ">
+            {{#if coupon.discounted}}
+                <del><h3>${{prodPrice}}</h3></del>
+                <h1 class="mb-0 yellow">${{math prodPrice '-' productDiscount}}</h1>
+            {{else}}
+                <h1 class="mb-0 yellow">$ {{prodPrice}}</h1>
+            {{/if}}
+            <span style="margin:0px;cursor: pointer !important;position: absolute;right: -10px;top: -10px" prodname="{{prodName}}" class="removeItem" keycode="{{keycode}}">
+                <img src="/img/remove.svg" class="img-fluid" width="25px">
+            </span>
+
+        </div>
+        <span>
+            You're alsmost done! Subscribe now and begin to economize on your shopping expenses, all the while enjoying the convenience and quality that you rightfully deserve.
+        </span>
+
+        <div class="hightlight">
+
+            <span>100% Guaranteed support and update for the next 5 years.</span>
+
+
+        </div>
+        {{/each}}
+        <hr />
+        {{#ifCond coupon.length '!=' '0'}}
+        <div id="coupon_wrapper">
+            <div class="row">
+                <div class="col-md-6">
+                    <input class="form-control mb-2" placeholder="Coupon code" id="fields_coupon" />
+                </div>
+                <div class="col-md-6 ">
+                    <span class="btn w-100 btn-green coupon-btn" id="btnCoupon" style="border: 1px solid green; color: green;">
+						Apply Coupon
+					</span>
+                </div>
+
+            </div>
+            
+        </div>
+
+        {{/ifCond}}
+        {{#if discountedPrice}}
+        <div class="row mb-2" style="color:red;">
+            <div class="col-8 col-md-9 col-lg-9 text-right">
+                Discount Price:
+            </div>
+            <div class="col-4 col-md-3 col-lg-3 text-left">
+                -${{discountedPrice}}
+            </div>
+        </div>
+
+        {{/if}}
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4><b>Total:</b></h4>
+            </div>
+            <div class="col-md-6 text-end">
+                <h4><b>${{totalPrice}}</b></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="btn btn-success px-3 w-100"><h4 class="fw-bold">Pay ${{totalPrice}}</h4></button>
+            </div>
+        </div>
+        <!--<div class="row mb-2">
+            <div class="col-8 col-md-9 col-lg-9 text-right">
+                Shipping Fee:
+            </div>
+            <div class="col-4 col-md-3 col-lg-3 text-left">
+                {{#if shipping_total}} FREE {{else}} ${{shipping_total}} {{/if}}
+            </div>
+        </div>-->
+        <!--<div class="row">
+            <div class="col-8 col-md-9 col-lg-9 text-right">
+                <b>Total:</b>
+            </div>
+            <div class="col-4 col-md-3 col-lg-3 text-left">
+                <b>${{totalPrice}}</b>
+            </div>
+        </div>
+        <br />-->
+    </script>
+    
+    <input id="website" type="hidden" value="garnetdiscountshopping.com" />
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery-latest.min.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery.cookie.js"></script>
+
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery.validate.min.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/additional-methods.min.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery.easyModal.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery.mask.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/states.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.api.call.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.form.script.js"></script>
+
+    <script src="assets/js/setup.js"></script>
+    <script src="assets/js/checkout-konnek.js"></script>
+    
+    <!-- <script src="assets/js/getDomain.js"></script>
+    <script src="assets/js/cart.js"></script> -->
     <script src="assets/js/load.js"></script>
+
+    
+
 </body>
 </html>

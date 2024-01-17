@@ -31,6 +31,7 @@
             <h2>Subscription Page</h2>
         </div>
     </div>
+    
 
     <div class="subscription pricing" id="pricing">
         <div class="container">
@@ -48,10 +49,10 @@
                             Enroll in a subscription program for shopping and savings today and begin to economize on your shopping expenses, all the while enjoying the convenience and quality that you rightfully deserve.
                         </p>
                     </div>
-                    <div class="box featured">
+                    <div class="box featured" data-index="1">
 
                         <div class="d-inline-block">
-                            <h2 class="price float-start"></h2>
+                            <h2 class="price float-start">$0.00</h2>
                         </div>
                         <div id="content">
                             <p class="monthly-offerdetails open m-0 amount-details" style="font-weight: 500; color: #333;"><span class="cross-stand-alone"></span>Sign up and pay <span class="price"></span> today for 30 days of service and <span class="price"></span> monthly thereafter, cancel anytime by calling <span class="cs-phone">833-420-6247</span> or online at www.msshoppingdeals.com.</p>
@@ -100,64 +101,22 @@
 
     <div id="footer"></div>
 
+
     <script id="productList-display" type="text/x-handlebars-template"></script>
     <input id="merchant-id" campaign_id="3" sub_keyword="smart retailing" type="hidden" />
     <!-- kinahanglan sa konnek.js end -->
 
-
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://pay.apiorders.com/onlineorder/js/jquery-latest.min.js"></script>
-    </script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+
     <script src="https://pay.apiorders.com/onlineorder/js/jquery.cookie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
     <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.api.call.js"></script>
-    <!-- <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart.js"></script> -->
-    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart_v2.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart.js"></script>
+    <!-- <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart_v2.js"></script> -->
     <script src="assets/js/setup.js"></script>
     <script src="assets/js/konnek.js"></script>
     <script src="assets/js/load.js"></script>
-    <!-- <script src="assets/js/getDomain.js"></script>
-    <script src="assets/js/cart.js"></script> -->
-
-
-
-    <!-- <script>
-                   
-        var konneckApiCall = KonnekApiInit();
-            konneckApiCall.setup(setup_); 
-        var konnekCart = KonnekCart(jQuery, konneckApiCall);
-            konnekCart.prodSetup(setup);// merge kn setup and setup variable
-            konnekCart.customCode=function(){
-                  $('.addToCart').on("click",function(){
-                       var parent = $(this).parents('.prod');
-                       var nameProduct= $(this).attr("prodname");
-                       setTimeout(function(){                  
-                            if($(parent).find(".added-cart").length!=0){
-                                 swal(nameProduct, "is added to cart !", "success");  
-                            } 
-                       },300);                       
-                  });
-                                                
-             
-            }
-
-        konnekCart.CountCart=function(count){
-             //gituyo ni kay ang shipping gihimo man nga product option so moadd sya as cart
-             //mao giadd ni para dle sya maapil sa count ang shipping sa cart
-             var arr = JSON.parse(konnekCart.cartStorage()); 
-             for (var i in arr) {
-                  if(arr[i].prodName.toLowerCase().indexOf("shipping")!=-1){ 
-                       count =count-1;
-                  }   
-             }
-             
-             $(".cartCount").text(count);
-
-        }
-
-        konnekCart.exec();
-</script> -->
 
 
     <script>
