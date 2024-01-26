@@ -20,35 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="header">
-      <nav class="navbar navbar-expand-md bg-light navbar-light">
-        <div class="container">
-          <a class="navbar-brand" href="#"><img src="assets/images/garnet-logo.png"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Service</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>  
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
-                </li> 
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Manage Account</a>
-                </li>   
-            </ul>
-          </div>  
-        </div>
-      </nav>
-  </div>
+  <div id="header"></div>
 
 
   <div class="thankyou">
@@ -72,7 +44,11 @@
     <p>All charges associated with this/these transactions will appear on your statement as:<br> MS Shopping Deals 833-420-6247 182Subscription</p>
     <br>
     <div class="ty-details">
-      <div class="ty-col">
+      <div class="m-2 ty-summary">
+        <!-- ty summary here -->
+        
+      </div>
+      <!-- <div class="ty-col">
         <div class="col-left">
           <p>Smart Retailing X1 Month</p>
         </div>
@@ -90,7 +66,7 @@
       </div>
       <hr style="width: 95%; margin: auto;">
       <br>
-      <p>To make sure that our Customer Service e-mails are not filtered into your "junk" or "bulk" folder, please add support@msshoppingdeals.com to your list of trusted senders. This is very important for keeping you informed of your order.</p>
+      <p>To make sure that our Customer Service e-mails are not filtered into your "junk" or "bulk" folder, please add support@msshoppingdeals.com to your list of trusted senders. This is very important for keeping you informed of your order.</p> -->
     </div>
   </div>
 
@@ -111,43 +87,76 @@
 
 
 
-    <div class="sec4">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <h2>Garnet Discount Shopping</h2>
-                <br>
-                <p><strong>Address:</strong>  Lorem Ipsum has been the industry's standard</p>
-                <p><strong>Phone:</strong> 000-000-000</p>
-                <p><strong>Email:</strong>  support@garnetdiscountshopping.com</p>
-            </div>
-            <div class="col-lg-6">
-                <h2>Usefull Link</h2>
-                <br>
-                <ul class="footer-links">
-                    <li>Terms & Condition</li>
-                    <li>Privacy Policy</li>
-                    <li>Contact Us</li>
-                    <li>Manage my Account</li>
-                </ul>
-                <br>
-                <div class="sm-icons">
-                    <img src="assets/images/twiiter.png">
-                    <img src="assets/images/fb.png">
-                    <img src="assets/images/ig.png">
-                    <img src="assets/images/skype.png">
-                    <img src="assets/images/linkedin.png">
+  <div id="footer"></div>
+
+
+    <script id="ty-summary" type="text/x-handlebars-template">
+      {{#each ty_data}}
+      <div class="row mt-0 p-0 gray">
+        <div class="col-md-12 col-12 gray py-4 my-auto">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row clearfix">
+                <div class="col-6 my-auto">
+  
+                  <p class="main-prod mb-0 text-capitalize">{{prodName_2}}{{desc}}</p>
                 </div>
+                <div class="col-6 my-auto">
+                  <p class="b text-end mb-0">
+                    {{#xif 'productDiscount>0'}}
+                      <del>${{prodPrice}}</del>
+                      <span class="prodPrice">${{x "parseFloat((prodPrice + shippingPrice )- productDiscount).toFixed(2)" }}</span>
+                    {{else}}
+                      <span class="prodPrice">${{prodPrice}}</span>
+                    {{/xif}}
+  
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="footer">
-        <div class="container">
-            <p>© Copyright <strong>Garnet Discount Shopping</strong>. All Rights Reserved</p>
+      <div class="row mt-0">
+        <div class="col-md-12 mt-0 pt-3 black">
+          <div class="row clearfix">
+            <div class="col-6">
+              <h3 class="align_left b"><span class="">Total Paid Today</span></h3>
+            </div>
+            <div class="col-6">
+              <h3 class="b text-end">
+                $<span class="main-total">
+                  {{#xif 'productDiscount>0'}}
+                    {{x "parseFloat((prodPrice + shippingPrice )- productDiscount).toFixed(2)" }}
+                  {{else}}
+                    {{prodPrice}}
+                  {{/xif}}
+    
+    
+                </span>
+              </h3>
+            </div>
+          </div>
+  
         </div>
-    </div>
+      </div>
+      <br><br>
+      <hr style="width: 95%; margin: auto;">
+      <br>
+      <p>To make sure that our Customer Service e-mails are not filtered into your "junk" or "bulk" folder, please add support@msshoppingdeals.com to your list of trusted senders. This is very important for keeping you informed of your order.</p>
+      {{/each}}
+    </script>
+
+
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery-latest.min.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery.cookie.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/jquery.easyModal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.api.call.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.cart.js"></script>
+    <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.form.script.js"></script>
+    <script src="assets/js/setup.js"></script>
+    <script src="assets/js/thankyou-konnek.js"></script>
 
 </body>
 </html>

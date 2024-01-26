@@ -154,7 +154,7 @@
 
             function purchaseQtyBtn_autoUpdate(lolo){
                 if (lolo.find(".addToCart").hasClass("toCheckout")) {
-                    lolo.find(".addToCart").html('<img src="/onlineorder/images/loading btn.svg" width="30" height="30" class="img-fluid inline-block" /> ');
+                    lolo.find(".addToCart").html('<img src="assets/images/loading btn.svg" width="30" height="30" class="img-fluid inline-block" /> ');
                     setTimeout(function () {                             
                         lolo.find(".addToCart").removeClass("toCheckout");                              
                        // lolo.find(".item.active").removeClass("active");  
@@ -273,7 +273,7 @@
             $(".btnCoupon").unbind().on("click", function (e) {
                 e.stopPropagation();
                 var parent_container= $(this).parents(".coupon_wrapper");
-                $(this).html('<img src="/onlineorder/images/loading btn.svg" width="40" height="40" class="img-fluid inline-block" />');
+                $(this).html('<img src="assets/images/loading btn.svg" width="40" height="40" class="img-fluid inline-block" />');
                 var coupon=parent_container.find(".fields_coupon").val().toLowerCase();
                 if(coupon!=""){
                      if (!!$.cookie('cartItem_dw')) {  
@@ -308,7 +308,7 @@
             //single cart container in cart summary
             $("#btnCoupon").unbind().on("click", function (e) {
                 e.stopPropagation();
-                $(this).html('<img src="/onlineorder/images/loading btn.svg" width="40" height="40" class="img-fluid inline-block" />');
+                $(this).html('<img src="assets/images/loading btn.svg" width="40" height="40" class="img-fluid inline-block" />');
                 var coupon=$("#fields_coupon").val().toLowerCase();
                 if(coupon!=""){
                      if (!!$.cookie('cartItem_dw')) {
@@ -476,7 +476,7 @@
                         if (dialog() == false) {
                             return false;
                         } else {
-                            parent.find(".addToCart").html('<img src="/onlineorder/images/loading btn.svg" width="30" height="30" class="img-fluid inline-block" /> ');
+                            parent.find(".addToCart").html('<img src="assets/images/loading btn.svg" width="30" height="30" class="img-fluid inline-block" /> ');
                             setTimeout(function () {                             
                                 parent.find(".addToCart").removeClass("toCheckout");
                                 parent.find(".addToCart").attr("keycode", item.attr("data-keycode"));

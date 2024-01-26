@@ -187,7 +187,10 @@
 
                 <div class="col-lg-6">
                     <div class="checkout-pay">
-                        <p class="pay-p">You have to pay</p>
+                        <div class="card card-blue p-3 text-white mb-3 cartItem">
+
+                        </div>
+                        <!-- <p class="pay-p">You have to pay</p>
                         <div class="check-amount">
                             <h3>
                                 $ 0.00
@@ -196,10 +199,7 @@
                         <br>
                         <p>You're alsmost done! Subscribe now and begin to economize on your shopping expenses, all the while enjoying the convenience and quality that you rightfully deserve.</p>
                         <p class="update-p">100% Guaranteed support and update for the next 5 years.</p>
-                        
-                        <div class="card card-blue p-3 text-white mb-3 cartItem">
-
-                        </div>
+                         -->
                         <!-- <div class="coupon">
                             <div class="col-lg">
                                 <div class="form-floating mb-3 coupon-input">
@@ -234,15 +234,15 @@
     <script id="cartList-display" type="text/x-handlebars-template">
         {{#each subscriptions}}
         <span>You have to pay</span>
-        <div class="d-flex flex-row align-items-end mb-3 prodname=" {{prodName}} " price=" {{prodPrice}} " shippingprice=" {{shippingPrice}} " maxqty=" {{maxQty}} " minqty=" 0" data-keycode="{{keycode}}" ">
+        <div class="d-flex flex-row align-items-end justify-content-center mb-3 prodname=" {{prodName}} " price=" {{prodPrice}} " shippingprice=" {{shippingPrice}} " maxqty=" {{maxQty}} " minqty=" 0" data-keycode="{{keycode}}" ">
             {{#if coupon.discounted}}
-                <del><h3>${{prodPrice}}</h3></del>
+                <del><h3 >${{prodPrice}}</h3></del>
                 <h1 class="mb-0 yellow">${{math prodPrice '-' productDiscount}}</h1>
             {{else}}
                 <h1 class="mb-0 yellow">$ {{prodPrice}}</h1>
             {{/if}}
             <span style="margin:0px;cursor: pointer !important;position: absolute;right: -10px;top: -10px" prodname="{{prodName}}" class="removeItem" keycode="{{keycode}}">
-                <img src="/img/remove.svg" class="img-fluid" width="25px">
+                <img src="assets/images/remove.svg" class="img-fluid" width="25px">
             </span>
 
         </div>
@@ -300,23 +300,6 @@
                 <button class="btn btn-success px-3 w-100"><h4 class="fw-bold">Pay ${{totalPrice}}</h4></button>
             </div>
         </div>
-        <!--<div class="row mb-2">
-            <div class="col-8 col-md-9 col-lg-9 text-right">
-                Shipping Fee:
-            </div>
-            <div class="col-4 col-md-3 col-lg-3 text-left">
-                {{#if shipping_total}} FREE {{else}} ${{shipping_total}} {{/if}}
-            </div>
-        </div>-->
-        <!--<div class="row">
-            <div class="col-8 col-md-9 col-lg-9 text-right">
-                <b>Total:</b>
-            </div>
-            <div class="col-4 col-md-3 col-lg-3 text-left">
-                <b>${{totalPrice}}</b>
-            </div>
-        </div>
-        <br />-->
     </script>
     
     <input id="website" type="hidden" value="garnetdiscountshopping.com" />
