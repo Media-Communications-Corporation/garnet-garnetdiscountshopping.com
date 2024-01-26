@@ -1,7 +1,7 @@
 var setup_ = {
     "campaignId": 3,
-    'paypal_sandbox_id': 3, 
-    'paypal_production_id':2, 
+    // 'paypal_sandbox_id': 3, 
+    // 'paypal_production_id':2, 
     "offerType": "cart",
     "corp_type": "garnet"
 };
