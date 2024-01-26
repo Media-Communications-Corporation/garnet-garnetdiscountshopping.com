@@ -1,3 +1,13 @@
+var campaignId=$("#merchant-id").attr("campaign_id"),
+subs_keyword= $("#merchant-id").attr("sub_keyword"),
+campaign_Setup;
+var totalCart=0;
+
+if(typeof campaignId=="undefined"){
+    campaign_Setup=campaignSetup;//from setup.js
+}else{
+    campaign_Setup={"campaignId":parseInt(campaignId)};
+}
 
 var konneckApiCall = KonnekApiInit();
 konneckApiCall.setup(setup_); 
