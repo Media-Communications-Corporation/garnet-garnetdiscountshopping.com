@@ -241,8 +241,15 @@ ul.footer-links {
 }
 
 .card {
-    background-color: #f1f3f6;
+    background-color: transparent;
     border: none;
+    color: #333 !important;
+}
+
+h1.mb-0.yellow {
+    background-color: #fff;
+    padding: 10px;
+    color: #28a745;
 }
 
 /*********** Subscription Page ***********/
