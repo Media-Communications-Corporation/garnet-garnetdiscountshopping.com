@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You!</title>
 
+    <link href="assets/images/icon.png" rel="icon">
+
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,10 +38,10 @@
         </div>
     </div>
 
-    <p>You will receive an email confirmation shortly at qwerty@email.com</p>
+    <p>You will receive an email confirmation shortly at <span class="email"></span></p>
     <br>
     <h3>
-      Order Date: Thursday, December 21, 2023
+      Order Date: <span class="order-date"></span>
     </h3>
     <p>All charges associated with this/these transactions will appear on your statement as:<br> MS Shopping Deals 833-420-6247 182Subscription</p>
     <br>
@@ -143,7 +145,7 @@
       <br><br>
       <hr style="width: 95%; margin: auto;">
       <br>
-      <p>To make sure that our Customer Service e-mails are not filtered into your "junk" or "bulk" folder, please add support@msshoppingdeals.com to your list of trusted senders. This is very important for keeping you informed of your order.</p>
+      <p>To make sure that our Customer Service e-mails are not filtered into your "junk" or "bulk" folder, please add support@garnetdiscountshopping.com to your list of trusted senders. This is very important for keeping you informed of your order.</p>
       {{/each}}
     </script>
 
@@ -157,6 +159,7 @@
     <script src="https://pay.apiorders.com/onlineorder/js/konnek.api/konnek.form.script.js"></script>
     <script src="assets/js/setup.js"></script>
     <script src="assets/js/thankyou-konnek.js"></script>
+    <script src="assets/js/load.js"></script>
 
 </body>
 </html>

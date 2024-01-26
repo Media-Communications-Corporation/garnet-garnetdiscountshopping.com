@@ -18,10 +18,10 @@ var setup=[
 ];
 
 var merchant_setup={
-    "cs-phone": "833-420-6247",
+    "cs-phone": "833-520-4512",
     "site-name": "Garnet Discount Shopping",
     "cs-email": "support@garnetdiscountshopping.com",
-    "company-address": "1340 N Great Neck Rd. STE 1272-227 Virginia Beach, VA 23454"
+    "company-address": "576 N Birdneck Rd PMB#223, Virginia Beach, VA 23451"
 }
 function merchant_detials(){
     //merchat_setup variable can be found in setup.js

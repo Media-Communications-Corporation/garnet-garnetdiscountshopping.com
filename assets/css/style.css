@@ -138,6 +138,10 @@ ul.footer-links {
     padding: 0px;
 }
 
+.footer-links a {
+    color: #333;;
+}
+
 .sm-icons img {
     margin-right: 10px;
 }
@@ -451,6 +455,51 @@ h1.mb-0.yellow {
     .ty-details {
         width: 100%;
         margin: auto;
+        padding: 10px;
+    }
+
+    p.main-prod.mb-0.text-capitalize {
+        text-align: left;
+    }
+
+    .btn-wrap {
+        margin-bottom: 32px;
     }
     
+    .btn-wrap a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .sec1-container button {
+        font-size: 14px;
+    }
+
+    .sec1-container button {
+        padding: 15px 40px;
+    }
+
+    .checkout-wrap {
+        margin-bottom: 35px;
+    }
+    
+    .checkout-wrap .container {
+        padding: 10px;
+    }
+
+    label.mt-2.billing-text {
+        font-size: 14px;
+    }
+
+    .row.total-p {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 20px 0px;
+    }
+
+    h3.align_left.b {
+        font-size: 24px;
+        text-align: left;
+    }
 }
