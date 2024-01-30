@@ -404,7 +404,12 @@ h1.mb-0.yellow {
 
 
 
-
+@media only screen and (max-width: 1440px) {
+    h3.align_left.b {
+        font-size: 20px;
+        text-align: left;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .ty-details {
@@ -501,5 +506,12 @@ h1.mb-0.yellow {
     h3.align_left.b {
         font-size: 24px;
         text-align: left;
+    }
+
+    ul.footer-links {
+        flex-direction: column;
+    }
+    ul.footer-links li {
+        padding: 10px 0px;
     }
 }
