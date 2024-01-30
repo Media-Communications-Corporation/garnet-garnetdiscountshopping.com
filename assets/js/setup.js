@@ -9,7 +9,7 @@ var setup_ = {
 var setup=[  
     { 
         "order":1,
-        "prod": "Smart Retailing", "related": [], "defaultLabel": "MS Shopping Deals Subscription",
+        "prod": "Smart Retailing", "related": [], "defaultLabel": "Garnet Discount Shopping Subscription",
         "monthlyOfferDetails": `*Sign up and pay $32.99 each month for Garnet Discount Shopping to the card provided today. Cancel anytime by emailing support@garnetdiscountshopping.com or calling 833-420-6247.`,
         "prodDescription":` x1 Month`,
         "apiKey":"fae362a8e3b0443bbfd6838cc776e723e29ed5515eaf47b0a5ab758a26869a59"
