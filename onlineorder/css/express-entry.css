@@ -1,0 +1,67 @@
+.autocomplete-express {
+              /*left: 0;*/ 
+                position: absolute;
+                /*width: 100%;*/
+                z-index: 2;
+              /* top: 25px;*/ 
+                display:none;
+            }
+            .autocomplete-express ul {
+                background: #ffffff none repeat scroll 0 0;
+                border-top: 1px dotted #ccc;
+                display: block;
+                padding-bottom: 0;
+                padding-left: 0;
+                position: relative;
+             /*   float:right;
+                top:-14px;*/ 
+                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .autocomplete-express ul li {
+                background: inherit;
+                border-color: #ccc;
+                border-image: none;
+                border-style: solid;
+                border-width: 0 1px;
+                display: block;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 4px 12px;
+                cursor:pointer;
+            }
+            .autocomplete-express ul li:not(.autocomplete-loader){
+                cursor:pointer;
+                border-bottom: 1px solid #ccc;
+            }
+            .autocomplete-express ul li:hover:not(.autocomplete-loader), .autocomplete-suggest:hover{
+                background:#FFF9D5 !important;
+                border:1px solid #EEE4A5 !important;
+            }
+            .autocomplete-express ul li:last-child {
+                border-bottom: 1px solid #ccc;
+            }
+            .easy-autocomplete.eac-square ul li *, .easy-autocomplete.eac-square ul .eac-category * {
+                font-weight: 300;
+            }
+            .autocomplete-loader{
+                font-style: italic;
+                font-size:12px !important;
+            }
+            .autocomplete-suggest {
+                background: #d7f1ed none repeat scroll 0 0 !important;
+                font-size: 13px !important;
+                border-bottom:2px dotted #A3A3A3 !important;
+            }
+            .autocomplete-suggest strong {
+                font-size:12px !important;
+             }
+            .autocomplete-suggest span{
+                font-style:italic;
+            }
+            .autocomplete-details {
+                border: 1px solid #e3e3e3;
+                color: #6e6f70;
+                font-size: 11px;
+                overflow-wrap: break-word;
+                padding: 4px;
+            }

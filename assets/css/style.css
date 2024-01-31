@@ -1,0 +1,517 @@
+* {
+    font-family: 'Lexend', sans-serif;
+}
+
+.header {
+    padding: 10px;
+}
+
+
+.bg-light {
+    background-color: #ffffff!important;
+}
+
+li.nav-item a {
+    color: #333;
+    margin: 0px 10px;
+}
+
+.banner {
+    background: url('../images/bg-banner.png') no-repeat center center;
+    background-size: cover;
+   -webkit-background-size:cover;
+   -moz-background-size:cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner h1 {
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.30);
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.banner h3 {
+    color: #ffffff;
+    font-size: 36px;
+}
+
+.banner a {
+    font-size: 20px;
+}
+
+.banner button {
+    padding: 15px 60px;
+    border-radius: 5px;
+    background: #00A651;
+    border: none;
+    color: #ffffff;
+}
+
+.sec1 {
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.sec1-wrap {
+    background-color: #CCEDDC;
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: 50px;
+}
+
+.sec1-container {
+    background-color: #F1F3F6;
+    border-radius: 20px;
+    padding: 50px 50px;
+}
+
+.sec1-container img {
+    padding-bottom: 20px;
+}
+
+.sec1-container a {
+    font-size: 20px;
+
+}
+
+.sec1-container button {
+    padding: 15px 60px;
+    border-radius: 5px;
+    background: #00A651;
+    border: none;
+    color: #ffffff;
+}
+
+.sec2 {
+    padding-bottom: 100px;
+}
+.sec2 .container{
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+}
+
+.sec2-bg {
+    background: url('../images/background-img2.png') no-repeat center center;
+    background-size: cover;
+   -webkit-background-size:cover;
+   -moz-background-size:cover;
+   border-radius: 20px 0px 0px 20px;
+}
+
+.sec2-content-wrap {
+    background: #F1F3F6;
+    padding: 20px 20px 20px 50px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.sec2-content {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.sec3 {
+    padding: 60px 0px;
+    text-align: center;
+    background-color: #F1F3F6;
+}
+
+.sec3-img img {
+    padding: 0px 60px;
+    margin-top: 50px;
+}
+
+.sec4 {
+    background-color: #CCEDDC;
+    padding: 60px 0px;
+    color: #333;
+}
+
+ul.footer-links {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer-links a {
+    color: #333;;
+}
+
+.sm-icons img {
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #00A651;
+    color: #fff;
+    padding: 30px 0px;
+}
+
+.footer p {
+    margin: 0px;
+}
+
+
+
+/* Subpages below header */
+.subpage-header .container {
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.subpage-header span {
+    color: #00A651;
+}
+
+.subpage-header h2 {
+    color: #00A651;
+}
+
+
+
+
+/*********** Checkout/Payment Page ***********/
+
+.checkout-wrap {
+    margin-bottom: 100px;
+}
+
+.checkout-wrap .container {
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.checkout-form {
+    text-align: left;
+}
+
+
+.checkout-pay {
+    background-color: #CCEDDC;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.coupon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupon-btn button{
+    border-radius: 5px;
+    border: 2px solid #00A651;
+    padding: 5px 45px;
+    background-color: #CCEDDC;
+    color: #00A651;
+}
+
+
+.pay-p {
+    color: #00A651;
+}
+
+.check-amount h3{
+    width: 30%;
+    margin: auto;
+    background-color: #fff;
+    color: #00A651;
+    padding: 10px 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.pay-btn button{
+    border-radius: 5px;
+    background: #00A651;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+    color: #333 !important;
+}
+
+h1.mb-0.yellow {
+    background-color: #fff;
+    padding: 10px;
+    color: #28a745;
+}
+
+/*********** Subscription Page ***********/
+
+.subscription .container {
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.subscription img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.subscription-amount {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.subscription-amount h2 {
+    color: #00A651;
+}
+
+.amount-details {
+    font-size: 14px;
+    background-color: #CCEDDC;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 300;
+}
+
+.subscription-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn1 {
+    color: #00A651;
+    border-radius: 5px;
+    border: 2px solid #00A651;
+    background-color: transparent;
+    padding: 8px 30px;
+}
+
+.btn2 {
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #00A651;
+    padding: 10px 30px;
+    border: none;
+}
+
+
+
+/*********** Contact Us Page ***********/
+.contact-section .container{
+    background-color: #F1F3F6;
+    padding: 20px 30px 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.contact-col {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.contact-col h3 {
+    color: #00A651;
+    font-size: 24px;
+}
+
+
+
+/*********** Thank You Page ***********/
+.thankyou {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.thankyou .container {
+    background-color: #CCEDDC;
+    padding: 80px 0px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.ty-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-img {
+    padding-right: 30px;
+}
+
+.ty-msg {
+    text-align: left;
+}
+
+.ty-msg p {
+    margin: 0px;
+}
+
+.ty-details {
+    width: 35%;
+    margin: auto;
+    background-color: #F1F3F6;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.ty-col {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.support .container {
+    background-color: #F1F3F6;
+    padding: 60px 0px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1550px) {
+    h3.align_left.b {
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .ty-details {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .sec2-bg {
+        height: 50vh;
+        border-radius: 20px 20px 0px 0px;
+    }
+    .sec2-content-wrap {
+        padding: 20px;
+        border-radius: 0px 0px 20px 20px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .banner {
+        height: auto;
+        padding: 150px 0px;
+    }
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    /* Subscription page */
+    .subscription-btn {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn2 {
+        margin-top: 5px;
+    }
+
+    /* Thank you page */
+    .ty-wrap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .check-img {
+        padding-right: 0px;
+    }
+
+    .ty-details {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    p.main-prod.mb-0.text-capitalize {
+        text-align: left;
+    }
+
+    .btn-wrap {
+        margin-bottom: 32px;
+    }
+    
+    .btn-wrap a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .sec1-container button {
+        font-size: 14px;
+    }
+
+    .sec1-container button {
+        padding: 15px 40px;
+    }
+
+    .checkout-wrap {
+        margin-bottom: 35px;
+    }
+    
+    .checkout-wrap .container {
+        padding: 10px;
+    }
+
+    label.mt-2.billing-text {
+        font-size: 14px;
+    }
+
+    .row.total-p {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 20px 0px;
+    }
+
+    h3.align_left.b {
+        font-size: 24px;
+        text-align: left;
+    }
+
+    ul.footer-links {
+        flex-direction: column;
+    }
+    ul.footer-links li {
+        padding: 10px 0px;
+    }
+}
